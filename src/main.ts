@@ -14,19 +14,7 @@ async function bootstrap() {
       return methodName;
     },
   });
-  SwaggerModule.setup('docs/api', app, document, {
-    customSiteTitle: 'Swagger UI',
-    customCss: `
-    .swagger-ui .topbar { background-color: #08083B; }
-    .swagger-ui .sidebar { background-color: #EE2D41; }
-    .swagger-ui a { color: #EE2D41; }
-    .swagger-ui .try-out__btn { background-color: #EE2D41; border-color: #EE2D41; color: #fff; }
-    .swagger-ui .btn.execute { background-color: #F5BD41; border-color: #F5BD41; color: #fff; }
-    .swagger-ui .btn.cancel { background-color: #EE2D41; border-color: #EE2D41; color: #fff; }
-    .swagger-ui .swagger-ui { background-color: #F8F8FC; }
-    .swagger-ui .topbar-wrapper max-height: 800px; }
-  `,
-  });
+  SwaggerModule.setup('docs/api', app, document);
 
   await app.listen(serviceConfiguration().service.port || 3000);
 }
