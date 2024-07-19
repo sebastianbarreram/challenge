@@ -1,14 +1,5 @@
 {
   "version": 2,
-  "env": {
-    "NODE_ENV": "development",
-    "SERVICE_NAME": "challenge-service",
-    "CHALLENGE_SERVICE_PORT": 3000,
-    "WEATHER_API_BASE_URL": "http://api.weatherapi.com/v1",
-    "WEATHER_API_KEY": "411f9e98b5524e54aaa10935241607",
-    "GMAIL_USERNAME": "gudrun.beer22@ethereal.email",
-    "GMAIL_PASSWORD": "WFvRBxGgkbSbdcQben"
-  },
   "builds": [
     {
       "src": "src/main.ts",
