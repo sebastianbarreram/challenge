@@ -59,6 +59,15 @@ $ npm run test
 $ npm run test:cov
 ```
 
+## Swagger API Documentation
+
+This project includes API documentation using Swagger. To access the Swagger documentation, follow these steps:
+
+### Local Deployment:
+
+- Ensure the project is running locally.
+- Open your web browser and go to [http://localhost:3000/docs/api](http://localhost:3000/docs/api/) (replace 3000 with your actual local server port if different).
+
 ## Deployment
 
 Visit [Challenge](https://challenge-cyan-rho.vercel.app/) to see the live demo.
