@@ -18,8 +18,8 @@ describe('WeatherApiService', () => {
 
   describe('httpGet', () => {
     const url = 'http://example.com/data';
+    const mockData = { description: 'Sunny' };
     it('should fetch data successfully', async () => {
-      const mockData = { description: 'Sunny' };
       const mockResponse = {
         ok: true,
         json: jest.fn().mockResolvedValue(mockData),
@@ -38,6 +38,7 @@ describe('WeatherApiService', () => {
       const mockResponse = {
         ok: false,
         status: 404,
+        json: () => Promise.resolve({ error: 'Not Found' }),
       } as unknown as Response;
 
       jest
@@ -50,11 +51,11 @@ describe('WeatherApiService', () => {
     });
 
     it('should throw an error on fetch error', async () => {
-      const mockError = new Error('Fetch error');
+      const mockError = new Error('error test in fetch');
       jest.spyOn(global, 'fetch').mockRejectedValueOnce(mockError);
 
       await expect(service.httpGet(url)).rejects.toThrow(
-        `Fetch error: ${mockError.message}`,
+        'Fetch error: error test in fetch',
       );
     });
   });

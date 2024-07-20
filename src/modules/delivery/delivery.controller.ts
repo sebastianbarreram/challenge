@@ -1,6 +1,7 @@
 import {
   ApiTags,
   ApiQuery,
+  ApiOperation,
   ApiOkResponse,
   ApiBadRequestResponse,
   ApiNotFoundResponse,
@@ -20,6 +21,11 @@ export class DeliveryController {
   private readonly logger = new Logger(DeliveryController.name);
 
   @Get('delay-notification')
+  @ApiOperation({
+    summary: 'Delay Notification Handler',
+    description:
+      'This endpoint is used to send delay notifications in case the forecast code for the next day is 1186, 1189, 1192, or 1195.',
+  })
   @ApiOkResponse({
     description: 'Delay notification handled succesfully',
     type: DelayNotificationHandlerResponse,
@@ -68,6 +74,11 @@ export class DeliveryController {
   }
 
   @Get('delay-notifications/:email')
+  @ApiOperation({
+    summary: 'Get Delay Notifications By Email',
+    description:
+      'This endpoint is used to fetch buyer delay notification history by email.',
+  })
   @ApiOkResponse({
     description: 'Fetch delay notifications by email succesfully',
     type: [DelayNotification],

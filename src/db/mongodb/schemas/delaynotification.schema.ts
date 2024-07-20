@@ -31,14 +31,14 @@ export class DelayNotification {
 
   @Prop({ required: true })
   @ApiProperty({
-    example: 1063,
+    example: 1189,
     description: 'The weather forecast code of the delivery location',
   })
   forecastCode: number;
 
   @Prop({ required: true })
   @ApiProperty({
-    example: 'Lluvia  moderada a intervalos',
+    example: 'Lluvia moderada',
     description: 'The weather forecast text of the delivery location',
   })
   forecastDescription: string;
