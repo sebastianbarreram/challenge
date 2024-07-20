@@ -24,13 +24,17 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This Node server-side app implements MongoDB, a NoSQL database, for storing and managing data. Also utilizes the weatherapi.com API to fetch near real-time weather information and nodemailer library for sending emails.
 
 ## Installation
 
 ```bash
 $ npm install
 ```
+
+## Environment-Variables  
+
+- Create `dev.env` file in the root directory. Use the [dev.env.template](./dev.env.template) :link: for reference and add your secrets.
 
 ## Running the app
 
@@ -51,22 +55,17 @@ $ npm run start:prod
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
 # test coverage
 $ npm run test:cov
 ```
 
+## Deployment
+
+Visit [Challenge](https://challenge-cyan-rho.vercel.app/) to see the live demo.
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
