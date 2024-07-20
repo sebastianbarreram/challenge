@@ -34,7 +34,7 @@ $ npm install
 
 ## Environment-Variables  
 
-- Create `dev.env` file in the root directory. Use the [dev.env.template](./dev.env.template) :link: for reference and add your secrets.
+Create `dev.env` file in the root directory. Use the [dev.env.template](./dev.env.template) for reference and add your secrets.
 
 ## Running the app
 
